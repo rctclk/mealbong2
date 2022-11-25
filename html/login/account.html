@@ -6,23 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 밀키트 쇼핑몰 :: Meal Bong </title>
+    <link rel="stylesheet" href="../../css/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/account.css">
+    <script defer src="../../js/account.js"></script>
 </head>
 
 <body>
 
-    <div class="account_container">
-    <div class="imgdiv">
-        <a href="../../index.html"><img src="../../image/logo4.png"></a>
-    </div>
-
     <main>
-        <div class="maindiv">
-            <div class="maindiv2">
-                <span class="mainspan">회원가입</span>
+    <div class="account_container">
+        <div class="imgdiv">
+            <a href="../../index.html"><img src="../../image/logo4.png"></a>
+        </div>
+
+            <div class="maindiv">
+                <div class="maindiv2">
+                    <span class="mainspan">회원가입</span>
                 </div>
 
                 <div class="divline align">
@@ -45,11 +47,11 @@
                                         </label>
                                     </div>
                                     <div class="box2">
-                                        <input type="text" class="inputstyle" placeholder="아이디를 입력해주세요" minlength="8"
-                                            required>
+                                        <input type="text" id="uid" class="inputstyle" placeholder="영문/숫자 조합 6자 이상" minlength="8"
+                                            >
                                     </div>
                                     <div class="box3">
-                                        <button type="button" class="buttonstyle">
+                                        <button type="button" class="buttonstyle checkBtn1">
                                             중복확인
                                         </button>
                                     </div>
@@ -66,10 +68,11 @@
                                     </label>
                                 </div>
                                 <div class="box2">
-                                    <input type="password" class="inputstyle" placeholder="비밀번호를 입력해주세요" minlength="10"
-                                        required>
+                                    <input type="password" id="upw" class="inputstyle" placeholder="영문/숫자/특수문자 조합 10자 이상" maxlength="20"
+                                    >
                                 </div>
                             </div>
+                            <p class="account_p account_hidden">영문/숫자/특수문자 조합 10자 이상 20자 이하</p>
 
                             <div class="box1">
                                 <div class="inner">
@@ -78,10 +81,12 @@
                                     </label>
                                 </div>
                                 <div class="box2">
-                                    <input type="password" class="inputstyle" placeholder="비밀번호를 한번 더 입력해주세요"
-                                        minlength="10" required>
+                                    <input type="password" id="upw2" class="inputstyle" placeholder="비밀번호를 한번 더 입력해주세요"
+                                        maxlength="20" >
                                 </div>
                             </div>
+
+                            <p class="account_p2 account_hidden">동일한 비밀번호를 입력</p>
 
                             <div class="box1">
                                 <div class="inner">
@@ -90,7 +95,7 @@
                                     </label>
                                 </div>
                                 <div class="box2">
-                                    <input type="text" class="inputstyle" placeholder="이름을 입력해주세요" required>
+                                    <input type="text" class="inputstyle" placeholder="이름을 입력해주세요" id="uname">
                                 </div>
                             </div>
 
@@ -101,11 +106,11 @@
                                     </label>
                                 </div>
                                 <div class="box2">
-                                    <input type="email" class="inputstyle" placeholder="예: mealbong@meal.com" required>
+                                    <input type="email" class="inputstyle" id ="umail" placeholder="예: mealbong@meal.com">
                                 </div>
 
                                 <div class="box3">
-                                    <button type="button" class="buttonstyle">
+                                    <button type="button" class="buttonstyle checkBtn2">
                                         중복확인
                                     </button>
                                 </div>
@@ -118,12 +123,32 @@
                                     </label>
                                 </div>
                                 <div class="box2">
-                                    <input type="tel" class="inputstyle" placeholder="숫자만 입력해주세요." required>
+                                    <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="phone"
+                                        class="inputstyle findinput" placeholder="휴대폰 번호를 입력해 주세요" maxlength="11">
                                 </div>
 
                                 <div class="box3">
-                                    <button type="button" class="buttonstyle2 button_opacity">
+                                    <button type="button" class="buttonstyle2 button_opacity checkBtn3" disabled>
                                         인증번호 받기
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="box1 Btn4_box">
+                                <div class="inner">
+                                    <label class="font">
+                                        인증번호
+                                    </label>
+                    
+                                </div>
+                                <div class="box2">
+                                    <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="phone_num"
+                                        class="inputstyle findinput" maxlength="7">
+                                </div>
+
+                                <div class="box3">
+                                    <button type="button" class="buttonstyle2 button_opacity checkBtn4" disabled>
+                                        인증번호 확인
                                     </button>
                                 </div>
                             </div>
@@ -142,6 +167,21 @@
 
                             </div>
 
+                                <div class="box1">
+                                    <div class="inner">
+                                      
+                                
+                                    </div>
+                                    <div class="box2">
+                                        <input type="text" 
+                                            id="address_input" class="inputstyle">
+                                    </div>
+                                
+                                    <div class="box3">
+                                       
+                                    </div>
+                                </div>
+
                             <div class="box1">
                                 <div class="inner genderlabel">
                                     <label class="font">
@@ -153,7 +193,7 @@
                                     <label for="man" name="gender" class="genderlabel2">남자</label>
                                     <input type="radio" class="genderinput" name="gender" id="woman">
                                     <label for="woman" name="gender" class="genderlabel2">여자</label>
-                                    <input type="radio" class="genderinput" name="gender" id="none">
+                                    <input type="radio" class="genderinput" name="gender" id="none" checked>
                                     <label for="none" name="gender">선택안함</label>
                                 </div>
 
@@ -168,25 +208,24 @@
                                 <div class="birth">
                                     <div class="birthchild birthchild1">
 
-                                        <input type="text" class="inputstyle2" placeholder="YYYY" maxlength="4"
-                                            >
+                                        <input type="text" class="inputstyle2" placeholder="YYYY" maxlength="4">
 
                                     </div>
                                     <div class="birthchild birthchild2">
-                                       <select name="month" id="month" class="month">
-                                        <option value="1">1월</option>
-                                        <option value="2">2월</option>
-                                        <option value="3">3월</option>
-                                        <option value="4">4월</option>
-                                        <option value="5">5월</option>
-                                        <option value="6">6월</option>
-                                        <option value="7">7월</option>
-                                        <option value="8">8월</option>
-                                        <option value="9">9월</option>
-                                        <option value="10">10월</option>
-                                        <option value="11">11월</option>
-                                        <option value="12">12월</option>
-                                       </select>
+                                        <select name="month" id="month" class="month">
+                                            <option value="1">1월</option>
+                                            <option value="2">2월</option>
+                                            <option value="3">3월</option>
+                                            <option value="4">4월</option>
+                                            <option value="5">5월</option>
+                                            <option value="6">6월</option>
+                                            <option value="7">7월</option>
+                                            <option value="8">8월</option>
+                                            <option value="9">9월</option>
+                                            <option value="10">10월</option>
+                                            <option value="11">11월</option>
+                                            <option value="12">12월</option>
+                                        </select>
 
                                     </div>
                                     <div class="birthchild">
@@ -200,29 +239,35 @@
                             </div>
 
 
-
-
-
-
                         </div>
 
             </div>
 
             </fieldset>
             <div class="buttonBox">
-                <button class="button_submit">
+                <button type="button" class="button_submit">
                     가입하기
                 </button>
             </div>
 
             </form>
+    </div>
+
+    <div class="modal_container hidden">
+        <div class="bg"></div>
+        <div class="modalBox">
+            <p class="modal_p"></p>
+            <div class="closeBtn_div">
+                <button class="closeBtn">확인</button>
+            </div>
         </div>
+    </div>
 
-    </main>
 </div>
+</main>
 
-     <!-- footer : 법적 필수 항목 -->
-     <footer>
+    <!-- footer : 법적 필수 항목 -->
+    <footer>
         <hr>
         <div class="footer">
             <div><a href="../footer/personal.html"><strong>개인정보처리방침</strong></a></div>
@@ -242,6 +287,9 @@
         </pre>
     </footer>
 
+
 </body>
+
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
 </html>

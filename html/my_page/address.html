@@ -12,26 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/mypage.css">
     <link rel="stylesheet" href="../../css/mainPage.css">
+    <script defer src="../../js/address.js"></script>
+    <script defer src="../../js/main_topDiv.js"></script>
 
 </head>
 
 <body>
     <header>
         <div class="space">
-            <ul class="login">
-                <li><a href="../login/Terms.html">회원가입</a></li>
-                <li><a href="../login/login.html">로그인</a></li>
-                <li class="l_hover"><a href="../service_page/notice.html">고객센터</a>
-                    <ul class="hoverbox">
-                        <li><a href="../service_page/notice.html">공지사항</a></li>
-                        <li><a href="../service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <a href="../../html/login/account.html">
+                지금 가입하고 적립금 <b>10,000원</b> 받아가세요!
+            </a>
+            <a class="space-close">
+                <img src="../../image/closeBtn.png">
+            </a>
+
         </div>
+        <ul class="login">
+            <li><a href="../../html/login/Terms.html">회원가입</a></li>
+            <li><a href="../../html/login/login.html">로그인</a></li>
+        </ul>
         <div class="flex-box">
-            <a href="../../index.html"><img src="../../image/logo4.png" alt="logo" class="logo"></a>
+            <a href="#"><img src="../../image/logo4.png" alt="logo" class="logo"></a>
             <form>
                 <div class="search">
                     <input type="text" placeholder="검색어를 입력 하세요" required>
@@ -39,36 +41,36 @@
                 </div>
             </form>
             <div class="cart_heart">
-                <a href="../my_page/mypage.html" class="mpage" alt="마이페이지"></a>
-                <a href="../login/cart.html" class="cart" alt="장바구니"></a>
-                <a href="../my_page/wish.html" class="heart" alt="찜한 상품"></a>
+                <a href="../../html/my_page/mypage.html" class="mpage" alt="마이페이지"></a>
+                <a href="../../html/login/cart.html" class="cart" alt="장바구니"></a>
+                <a href="../../html/my_page/wish.html" class="heart" alt="찜한 상품"></a>
             </div>
         </div>
-        <!-- nav / position : fixed -->
-        <nav>
-            <ul class="menu">
-                <li><a href="../menu_list/Korean_menulist.html">카테고리</a>
-                    <ul class="submenu">
-                        <li><a href="../menu_list/Korean_menulist.html">한식</a></li>
-                        <li><a href="../menu_list/Chinese_menulist.html">중식</a></li>
-                        <li><a href="../menu_list/Japanese_menulist.html">일식</a></li>
-                        <li><a href="../menu_list/Western_menulist.html">양식</a></li>
-                        <li><a href="../menu_list/Bunsik_menulist.html">분식/야식</a></li>
-                        <li><a href="../menu_list/Asian_menulist.html">아시안</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#pop">인기상품</a></li>
-                <li><a href="../../index.html#recommend">오늘의 추천</a></li>
-                <li><a href="../service_page/notice.html">고객센터</a>
-                    <ul class="submenu2">
-                        <li><a href="../service_page/notice.html">공지사항</a></li>
-                        <li><a href="../service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <!-- nav / position : sticky -->
     </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="../../html/menu_list/Korean_menulist.html">카테고리</a>
+                <ul class="submenu">
+                    <li><a href="../../html/menu_list/Korean_menulist.html">한식</a></li>
+                    <li><a href="../../html/menu_list/Chinese_menulist.html">중식</a></li>
+                    <li><a href="../../html/menu_list/Japanese_menulist.html">일식</a></li>
+                    <li><a href="../../html/menu_list/Western_menulist.html">양식</a></li>
+                    <li><a href="../../html/menu_list/Bunsik_menulist.html">분식/야식</a></li>
+                    <li><a href="../../html/menu_list/Asian_menulist.html">아시안</a></li>
+                </ul>
+            </li>
+            <li><a href="#pop">인기상품</a></li>
+            <li><a href="#recommend">오늘의 추천</a></li>
+            <li><a href="../../html/service_page/notice.html">고객센터</a>
+                <ul class="submenu2">
+                    <li><a href="../../html/service_page/notice.html">공지사항</a></li>
+                    <li><a href="../../html/service_page/faq.html">자주하는 질문</a></li>
+                    <li><a href="../../html/service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <main>
         <div class="mypage">
             <div class="aside">
@@ -108,40 +110,72 @@
                 <div class="content_adress_1">
                     <h2>배송지 관리</h2>
                     <div class="adress_add">
-                        <button>
+                        <button class="adress_add_button">
                             <span>새 배송지 추가</span>
                         </button>
                     </div>
-
-
                 </div>
-                <div class="content_adress_2">
-                    <div>선택</div>
-                    <div>주소</div>
-                    <div>받으실분</div>
-                    <div>연락처</div>
-                    <div>수정</div>
-
-                    <div><input type="radio" name="adress_select"></div>
-                    <div>부산광역시 사하구 다대2동 삼환아파트 209동 505호</div>
-                    <div>박규민</div>
-                    <div>010-5214-4663</div>
-                    <div>
-                        <a href="#"></a>
-                    </div>
-                    <div><input type="radio" name="adress_select"></div>
-                    <div>충청남도 천안시 동남구 만남로9 더샵오피스텔 813호</div>
-                    <div>박규민</div>
-                    <div>010-5214-4663</div>
-                    <div>
-                        <a href="#"></a>
+                <div class="content_adress">
+                    <div class="content_adress_2">
+                        <div>선택</div>
+                        <div>주소</div>
+                        <div>받으실분</div>
+                        <div>연락처</div>
+                        <div>수정</div>
                     </div>
 
+                    <div class="content_adress_box">
+                        <div><input type="radio" name="adress_select"></div>
+                        <div>
+                            <span>부산광역시 사하구 다대2동 삼환아파트&nbsp;</span>
+                            <span>209동 505호</span>
+                        </div>
+                        <div>박규민</div>
+                        <div>010-5214-4663</div>
+                        <div>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="content_adress_box">
+                        <div><input type="radio" name="adress_select"></div>
+                        <div>
+                            <span>충청남도 천안시 동남구 만남로9&nbsp;</span>
+                            <span>더샵오피스텔 813호</span>
+                        </div>
+                        <div>박규민</div>
+                        <div>010-5214-4663</div>
+                        <div>
+                            <button></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="content_adress_3">
                     <button class="adress_button">
                         <span>기본 배송지 설정</span>
                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="address_fix_content hidden">
+            <div class="address_fix_box">
+                <h2>배송지 수정</h2>
+                <div>
+                    <div class="fix_address"></div>
+                    <input type="text" placeholder="나머지 주소를입력해 주세요.">
+                </div>
+                <div>
+                    <div class="fix_name">받으실 분</div>
+                    <input type="text" placeholder="이름을 입력해 주세요.">
+                </div>
+                <div>
+                    <div class="fix_call">연락처</div>
+                    <input type="text" placeholder="번호를 입력해 주세요.">
+                </div>
+                <div>
+                    <div class="address_fix_button">
+                        <button class="fix_check">확인</button>
+                        <button class="fix_cancel">삭제</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -165,6 +199,7 @@
     Copyright © 2022 MealBong. All rights reserved.
         </pre>
     </footer>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 
 </html>

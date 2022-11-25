@@ -11,62 +11,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script defer src="../../js/main_topDiv.js"></script>
+    <script defer src="../../js/order.js"></script>
+
 </head>
 
 <body>
-    <header>
-        <div class="space">
-            <ul class="login">
-                <li><a href="./Terms.html">회원가입</a></li>
-                <li><a href="./login.html">로그인</a></li>
-                <li class="l_hover"><a href="../service_page/notice.html">고객센터</a>
-                    <ul class="hoverbox">
-                        <li><a href="../service_page/notice.html">공지사항</a></li>
-                        <li><a href="../service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="flex-box">
-            <a href="../../index.html"><img src="../../image/logo4.png" alt="logo" class="logo"></a>
-            <form>
-                <div class="search">
-                    <input type="text" placeholder="검색어를 입력 하세요" required>
-                    <button class="button"><img class="button-set" src="../../image/search.png"></button>
-                </div>
-            </form>
-            <div class="cart_heart">
-                <a href="../my_page/mypage.html" class="mpage" alt="마이페이지"></a>
-                <a href="./cart.html" class="cart" alt="장바구니"></a>
-                <a href="../my_page/wish.html" class="heart" alt="찜한 상품"></a>
+<header>
+    <div class="space">
+
+        <a href="./account.html">
+            지금 가입하고 적립금 <b>10,000원</b> 받아가세요!
+        </a>
+        <a class="space-close">
+            <img src="../../image/closeBtn.png">
+        </a>
+
+    </div>
+    <ul class="login">
+        <li><a href="./account.html">회원가입</a></li>
+        <li><a href="./login.html">로그인</a></li>
+    </ul>
+    <div class="flex-box">
+        <a href="#"><img src="../../image/logo4.png" alt="logo" class="logo"></a>
+        <form>
+            <div class="search">
+                <input type="text" placeholder="검색어를 입력 하세요" id="search_input">
+                <a href="../search/search.html" class="button"><img class="button-set" src="../../image/search.png"></a>
             </div>
+        </form>
+        <div class="cart_heart">
+            <a href="../my_page/mypage.html" class="mpage" alt="마이페이지"></a>
+            <a href="./cart.html" class="cart" alt="장바구니"></a>
+            <a href="../my_page/wish.html" class="heart" alt="찜한 상품"></a>
         </div>
-        <!-- nav / position : fixed -->
-        <nav>
-            <ul class="menu">
-                <li><a href="../menu_list/Korean_menulist.html">카테고리</a>
-                    <ul class="submenu">
-                        <li><a href="../menu_list/Korean_menulist.html">한식</a></li>
-                        <li><a href="../menu_list/Chinese_menulist.html">중식</a></li>
-                        <li><a href="../menu_list/Japanese_menulist.html">일식</a></li>
-                        <li><a href="../menu_list/Western_menulist.html">양식</a></li>
-                        <li><a href="../menu_list/Bunsik_menulist.html">분식/야식</a></li>
-                        <li><a href="../menu_list/Asian_menulist.html">아시안</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#pop">인기상품</a></li>
-                <li><a href="../../index.html#recommend">오늘의 추천</a></li>
-                <li><a href="../service_page/notice.html">고객센터</a>
-                    <ul class="submenu2">
-                        <li><a href="../service_page/notice.html">공지사항</a></li>
-                        <li><a href="../service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
+    </div>
+    <!-- nav / position : sticky -->
+</header>
+<nav>
+    <ul class="menu">
+        <li><a href="../menu_list/Korean_menulist.html">카테고리</a>
+            <ul class="submenu">
+                <li><a href="../menu_list/Korean_menulist.html">한식</a></li>
+                <li><a href="../menu_list/Chinese_menulist.html">중식</a></li>
+                <li><a href="../menu_list/Japanese_menulist.html">일식</a></li>
+                <li><a href="../menu_list/Western_menulist.html">양식</a></li>
+                <li><a href="../menu_list/Bunsik_menulist.html">분식/야식</a></li>
+                <li><a href="../menu_list/Asian_menulist.html">아시안</a></li>
             </ul>
-        </nav>
-    </header>
+        </li>
+        <li><a href="#pop">인기상품</a></li>
+        <li><a href="#recommend">오늘의 추천</a></li>
+        <li><a href="../service_page/notice.html">고객센터</a>
+            <ul class="submenu2">
+                <li><a href="../service_page/notice.html">공지사항</a></li>
+                <li><a href="../service_page/faq.html">자주하는 질문</a></li>
+                <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 
     <div class="cart_container">
         <span class="mainspan">주문서</span>
@@ -247,10 +251,43 @@
                             <button type="button" class="diva3_button">계좌이체</button>
                             <button type="button" class="diva3_button">휴대폰</button>
                         </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="card_box">
+                        <select name="month" id="month" class="month">
+                            <option value="1">하나</option>
+                            <option value="2">신한</option>
+                            <option value="3">현대</option>
+                            <option value="4">국민</option>
+                            <option value="5">삼성</option>
+                            <option value="6">롯데</option>
+    
+                        </select>
 
-
+                        <select name="month" id="month" class="month">
+                            <option value="1">일시불</option>
+                            <option value="2">1개월</option>
+                            <option value="3">2개월</option>
+                            <option value="4">3개월</option>
+                            <option value="5">4개월</option>
+                            <option value="6">5개월</option>
+                            <option value="7">6개월</option>
+                        </select>
                     </div>
 
+                    <div class="bank_box">
+                        <select name="month" id="month" class="month">
+                            <option value="1">국민은행</option>
+                            <option value="2">신한은행</option>
+                            <option value="3">하나은행</option>
+                            <option value="4">농협</option>
+                            <option value="5">SC제일은행</option>
+                    
+    
+                        </select>
+                    </div>
 
 
                 </div>

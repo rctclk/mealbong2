@@ -365,39 +365,6 @@ nav ul li:nth-child(4):hover .submenu2 {
     border: 1px solid lightsalmon;
 }
 
-/* footer ------------ */
-
-/* footer {
-    min-width: 1200px;
-    margin-top: 50px;
-}
-
-.footer {
-    display: flex;
-    justify-content: flex-start;
-    height: 50px;
-}
-
-.footer a {
-    text-decoration: none;
-    color: black;
-    font-size: .8em;
-}
-
-.footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
-
-pre {
-    font-size: .8em;
-} */
-
-
-
-/* =====================find_submit 스타일 */
 
 .submit_button12 {
     width: 280px;
@@ -417,7 +384,10 @@ pre {
     min-width: 1050px;
     height: 350px;
     margin-top: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 170px;
+    display : flex;
+    flex-direction: column;
+    justify-content : flex-end;
 
 }
 
@@ -436,6 +406,7 @@ pre {
     cursor : pointer;
 
 }
+
 
 /* ===============order_submit============== */
 
@@ -458,7 +429,7 @@ pre {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-
+    
 }
 
 /* =================findid_submit================= */
@@ -475,7 +446,7 @@ pre {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-
+    
 }
 
 .loginid_submit2 {
@@ -502,3 +473,44 @@ pre {
     font-size: 16px;
     cursor : pointer;
 }
+
+.main_find {
+    height : calc(100vh - 160px - 271px);
+    display : flex;
+}
+
+.submit_loginframe2 {
+    
+    width : 100vw;
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    
+}
+
+.loginform2 {
+    width: 355px;
+    margin: 0px auto;
+}
+
+/* ==========================================회원가입 submit================================ */
+
+.loginform_account {
+    width: 355px;
+    margin: 0px auto;
+}
+
+.loginframe_account {
+    min-width: 1050px;
+    height: 350px;
+    margin-top: 80px;
+    margin-bottom: 170px;
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    
+}
+
+
+

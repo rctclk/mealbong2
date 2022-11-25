@@ -6,34 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 밀키트 쇼핑몰 :: Meal Bong </title>
+    <link rel="stylesheet" href="../../css/modal.css">
     <link rel="stylesheet" href="../../css/cart.css">
     <link rel="stylesheet" href="../../css/mainPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script defer src="../../js/cart.js"></script>
+    <script defer src="../../js/main_topDiv.js"></script>
 </head>
 
 <body>
     <header>
         <div class="space">
-            <ul class="login">
-                <li><a href="./Terms.html">회원가입</a></li>
-                <li><a href="./login.html">로그인</a></li>
-                <li class="l_hover"><a href="../service_page/notice.html">고객센터</a>
-                    <ul class="hoverbox">
-                        <li><a href="../service_page/notice.html">공지사항</a></li>
-                        <li><a href="../service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
+    
+            <a href="./account.html">
+                지금 가입하고 적립금 <b>10,000원</b> 받아가세요!
+            </a>
+            <a class="space-close">
+                <img src="../../image/closeBtn.png">
+            </a>
+    
         </div>
+        <ul class="login">
+            <li><a href="./account.html">회원가입</a></li>
+            <li><a href="./login.html">로그인</a></li>
+        </ul>
         <div class="flex-box">
-            <a href="../../index.html"><img src="../../image/logo4.png" alt="logo" class="logo"></a>
+            <a href="#"><img src="../../image/logo4.png" alt="logo" class="logo"></a>
             <form>
                 <div class="search">
-                    <input type="text" placeholder="검색어를 입력 하세요" required>
-                    <button class="button"><img class="button-set" src="../../image/search.png"></button>
+                    <input type="text" placeholder="검색어를 입력 하세요" id="search_input">
+                    <a href="../search/search.html" class="button"><img class="button-set" src="../../image/search.png"></a>
                 </div>
             </form>
             <div class="cart_heart">
@@ -42,78 +46,90 @@
                 <a href="../my_page/wish.html" class="heart" alt="찜한 상품"></a>
             </div>
         </div>
-        <!-- nav / position : fixed -->
-        <nav>
-            <ul class="menu">
-                <li><a href="../menu_list/Korean_menulist.html">카테고리</a>
-                    <ul class="submenu">
-                        <li><a href="../menu_list/Korean_menulist.html">한식</a></li>
-                        <li><a href="../menu_list/Chinese_menulist.html">중식</a></li>
-                        <li><a href="../menu_list/Japanese_menulist.html">일식</a></li>
-                        <li><a href="../menu_list/Western_menulist.html">양식</a></li>
-                        <li><a href="../menu_list/Bunsik_menulist.html">분식/야식</a></li>
-                        <li><a href="../menu_list/Asian_menulist.html">아시안</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../index.html#pop">인기상품</a></li>
-                <li><a href="../../index.html#recommend">오늘의 추천</a></li>
-                <li><a href="../service_page/notice.html">고객센터</a>
-                    <ul class="submenu2">
-                        <li><a href="../service_page/notice.html">공지사항</a></li>
-                        <li><a href="../service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <!-- nav / position : sticky -->
     </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="../menu_list/Korean_menulist.html">카테고리</a>
+                <ul class="submenu">
+                    <li><a href="../menu_list/Korean_menulist.html">한식</a></li>
+                    <li><a href="../menu_list/Chinese_menulist.html">중식</a></li>
+                    <li><a href="../menu_list/Japanese_menulist.html">일식</a></li>
+                    <li><a href="../menu_list/Western_menulist.html">양식</a></li>
+                    <li><a href="../menu_list/Bunsik_menulist.html">분식/야식</a></li>
+                    <li><a href="../menu_list/Asian_menulist.html">아시안</a></li>
+                </ul>
+            </li>
+            <li><a href="#pop">인기상품</a></li>
+            <li><a href="#recommend">오늘의 추천</a></li>
+            <li><a href="../service_page/notice.html">고객센터</a>
+                <ul class="submenu2">
+                    <li><a href="../service_page/notice.html">공지사항</a></li>
+                    <li><a href="../service_page/faq.html">자주하는 질문</a></li>
+                    <li><a href="../service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
     <main>
         <div class="cart_container">
             <span class="mainspan">장바구니</span>
 
             <div class="div_a">
-                <input type="checkbox" name="" id="label34" class="cartinput" checked>
-                <label for="label34" class="label_style">전체선택(4/4)</label>
+                <div class="All_div">
+                    <button type="button" class="selectAll_box"></button>
+                    <label for="label34" class="label_style">전체선택(<span class="select_value1">4</span>/<span class="select_value2">4</span>)</label>
+                </div>
             </div>
 
             <div class="cart_divbox">
                 <div class="cart_div1">
                     <div class="div1_sub">
                         <div class="div1_sub_sub">
-                            <input type="checkbox" class="div1_input" checked>
+                            <span class="select_box"></span>
                             <a href="../food_info/Asian_FoodInfo/Asian_Bunzza.html" class="div1_a_img1"></a>
-                            <a href="../food_info/Asian_FoodInfo/Asian_Bunzza.html" class="div1_a2">(아시안) 불고기 분짜</a>
+                            <a href="../food_info/Asian_FoodInfo/Asian_Bunzza.html" class="div1_a2">나시고랭 (2인)</a>
 
                         </div>
 
-                        <div>
-                            <input type="number" min="1" max="1" value="1" class="div1_inputNumber">
-
-                            <span class="div1_span">15,000원</span>
-
+                        <div class="btn_addBox">
+                            <button type="button" class="btn_minus btn_add" disabled></button>
+                            <span class="btn_addSpan">1</span>
+                            <button type="button" class="btn_plus btn_add"></button>
                         </div>
-
-
+                        
+                        <div class="div1_priceBox">
+                        
+                            <span class="div1_span">10000</span><span class="div1_span2">원</span>
+                            <span class="cart_hidden price_value">10000</span>
+                            <span class="close_btn"></span>
+                        
+                        </div>
 
                     </div>
 
-                    <div class="div1_line"></div>
-
                     <div class="div1_sub">
                         <div class="div1_sub_sub">
-                            <input type="checkbox" class="div1_input" checked>
+                            <span class="select_box"></span>
                             <a href="../food_info/Chinese_FoodInfo/Chinese_MaraSoup.html" class="div1_a_img2"></a>
                             <a href="../food_info/Chinese_FoodInfo/Chinese_MaraSoup.html" class="div1_a2">(중식) 얼큰
-                                마라탕</a>
+                                나시고랭 (2인) </a>
 
                         </div>
 
 
-                        <div>
-                            <input type="number" min="1" max="1" value="1" class="div1_inputNumber">
+                         <div class ="btn_addBox">
+                            <button type="button" class="btn_minus btn_add" disabled></button>
+                            <span class="btn_addSpan">1</span>
+                            <button type="button" class="btn_plus btn_add"></button>
+                        </div>
 
-                            <span class="div1_span">12,000원</span>
+                        <div class="div1_priceBox">
+
+                            <span class="div1_span">10000</span><span class="div1_span2">원</span>
+                            <span class="cart_hidden price_value">10000</span>
+                            <span class="close_btn"></span>
 
                         </div>
 
@@ -121,51 +137,62 @@
 
                     </div>
 
-                    <div class="div1_line"></div>
 
                     <div class="div1_sub">
                         <div class="div1_sub_sub">
-                            <input type="checkbox" class="div1_input" checked>
+                            <span class="select_box"></span>
                             <a href="../food_info/Japanese_FoodInfo/Japanese_millefeuille.html" class="div1_a_img3"></a>
                             <a href="../food_info/Japanese_FoodInfo/Japanese_millefeuille.html" class="div1_a2">(일식)
-                                나혼자 밀푀유 샤브전골</a>
+                                나시고랭 (2인)</a>
+
+                        </div>
+                        <div class ="btn_addBox">
+                            <button type="button" class="btn_minus btn_add" disabled></button>
+                            <span class="btn_addSpan">1</span>
+                            <button type="button" class="btn_plus btn_add"></button>
+                        </div>
+
+                        <div class="div1_priceBox">
+
+                            <span class="div1_span">10000</span><span class="div1_span2">원</span>
+                            <span class="cart_hidden price_value">10000</span>
+                            <span class="close_btn"></span>
 
                         </div>
 
-                        <div>
-                            <input type="number" min="1" max="1" value="1" class="div1_inputNumber">
-
-                            <span class="div1_span">12,000원</span>
-
-                        </div>
 
 
 
                     </div>
 
-                    <div class="div1_line"></div>
 
                     <div class="div1_sub">
                         <div class="div1_sub_sub">
-                            <input type="checkbox" class="div1_input" checked>
+                            <span class="select_box"></span>
                             <a href="../food_info/Korean_FoodInfo/Korean_SoybeanSoup.html" class="div1_a_img4"></a>
                             <a href="../food_info/Korean_FoodInfo/Korean_SoybeanSoup.html" class="div1_a2">(한식)
-                                애호박 된장 찌개</a>
+                                나시고랭 (2인) </a>
 
                         </div>
 
-                        <div>
-                            <input type="number" min="1" max="1" value="1" class="div1_inputNumber">
-
-                            <span class="div1_span">10,000원</span>
-
+                        <div class="btn_addBox">
+                            <button type="button" class="btn_minus btn_add" disabled></button>
+                            <span class="btn_addSpan">1</span>
+                            <button type="button" class="btn_plus btn_add"></button>
+                        </div>
+                        
+                        <div class="div1_priceBox">
+                        
+                            <span class="div1_span">10000</span><span class="div1_span2">원</span>
+                            <span class="cart_hidden price_value">10000</span>
+                            <span class="close_btn"></span>
+                        
                         </div>
 
 
 
                     </div>
-
-                    <div class="div1_line"></div>
+                    
 
                 </div>
                 <div class="cart_div2">
@@ -175,7 +202,7 @@
                         <div class="cart_subdiv1">
                             <p class="align_p">배송지</p>
                             <p>경기 성남시 분당구 정자로 푸르지오시티 푸르지오시티 푸르지오시티</p>
-                            <div class="subdiv1_button"><a href="" class="subdiv1_a">배송지 변경</a></div>
+                            <div class="subdiv1_button"><button type="button" class="subdiv1_a subdiv1_button address_btn">배송지 변경</button></div>
                         </div>
 
 
@@ -183,19 +210,23 @@
 
                             <div class="subdiv2_box">
                                 <span>상품금액</span>
-                                <span>49,000원</span>
+                                <div>    
+                                    <span class="total_price2">40000</span><span>원</span>
+                                </div>
                             </div>
 
                             <div class="subdiv2_box2">
                                 <span>배송비</span>
-                                <span>3000원</span>
+                                <span class="del_fee">3000원</span>
                             </div>
 
                             <div class="subdiv2_line"></div>
 
                             <div class="subdiv2_box3">
                                 <span>결제예정금액</span>
-                                <span>52,000원</span>
+                                <div>
+                                    <span class="total_price">43000</span><span>원</span>
+                                </div>
                             </div>
 
 
@@ -203,7 +234,9 @@
 
                     </div>
                     <div class="cart_subdiv3">
-                        <div class="subdiv3_button"><a href="../login/order.html" class="subdiv1_a">주문하기</a></div>
+                        <form action="../login/order.html">
+                            <div class="subdiv3_button"><button type="submit" class="subdiv1_a subdiv1_button cart_submitBtn">주문하기</button></div>
+                        </form>
 
                     </div>
 
@@ -211,6 +244,19 @@
 
             </div>
 
+        </div>
+
+        <div class="modal_container hidden">
+            <div class="bg"></div>
+            <div class="modalBox">
+                <p></p>
+                <div class="closeBtn_div">
+                    <div class="modal_zz">
+                        <button class="closeBtn">취소</button>
+                        <button class="closeBtn modal_confirm">확인</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -236,5 +282,7 @@
         </pre>
     </footer>
 </body>
+
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
 </html>

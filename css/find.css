@@ -15,7 +15,7 @@
     display : flex;
     flex-direction : column;
     width : 600px;
-    margin : 0 auto;
+    margin : 0 auto 148px;
 
 }
 
@@ -25,7 +25,8 @@
     text-align: center;
 }
 
-.formdiv {
+.formdiv,
+.formdiv3 {
     display : flex;
     flex-direction : column;
     text-align : left;
@@ -95,7 +96,12 @@ box-sizing : border-box;
     display : flex;
     justify-content : center;
     align-items : center;
+    cursor : pointer;
       
+}
+
+.formdiv_hidden {
+    display : none;
 }
 
 
@@ -116,7 +122,7 @@ box-sizing : border-box;
     line-height : 50px;
     background-color: rgba(128, 128, 128, 0.317);
     border-radius: 5px;
-    cursor : pointer;
+    /* cursor : pointer; */
     
 }
 .spanbutton {
@@ -129,6 +135,12 @@ box-sizing : border-box;
     margin-top : 30px;
     border : none;
 }
+
+form input {
+    border : 1px solid;
+}
+
+
 
 /* footer ------------ */
 

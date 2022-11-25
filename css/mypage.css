@@ -21,7 +21,6 @@ main {
 
 .aside ul {
     list-style: none;
-    border: 1px solid;
     border-bottom: 0;
     box-sizing: border-box;
     font-size: 14px;
@@ -30,8 +29,14 @@ main {
 .aside ul li {
     line-height: 14px;
     box-sizing: border-box;
-    border-bottom: 1px solid;
+    border-top: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
     font-weight: bold;
+}
+
+.aside ul li:last-child {
+    border-bottom: 1px solid gainsboro;
 }
 
 .aside ul a {
@@ -83,152 +88,280 @@ main {
 /* 고객센터 - 공지사항 */
 
 .content_notice {
-    display: grid;
-    grid-template-columns: 1fr 5fr 2fr 2fr;
-    grid-auto-rows: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
-.content_notice div:nth-child(-n + 4) {
-    font-weight: bold;
+.notice_list_Box {
+    cursor: pointer;
+}
+
+
+.notice_Box {
+    display: flex;
+    padding: 20px 0;
     border-bottom: 2px solid;
-    box-sizing: border-box;
-}
-
-.content_notice div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid;
-    box-sizing: border-box;
-}
-
-.content_notice a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 30px;
-    border-bottom: 1px solid;
-    box-sizing: border-box;
-    color: black;
-    text-decoration: none;
-}
-
-.content_notice a:hover {
     font-weight: bold;
+    box-sizing: border-box;
 }
+
+.notice_Box div,
+.notice_list div,
+.notice_list_content div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice_list {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+    box-sizing: border-box;
+}
+
+.notice_list_content {
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    box-sizing: border-box;
+}
+
+.notice_list_content div:nth-child(1) {
+    flex: 1;
+
+}
+
+.notice_list_content div:nth-child(2) {
+    flex: 9;
+    padding: 20px;
+}
+
+.notice_Box div:nth-child(1),
+.notice_list div:nth-child(1) {
+    flex: 1;
+}
+
+.notice_Box div:nth-child(2),
+.notice_list div:nth-child(2) {
+    flex: 5;
+}
+
+.notice_Box div:nth-child(3),
+.notice_list div:nth-child(3) {
+    flex: 2;
+}
+
+.notice_Box div:nth-child(4),
+.notice_list div:nth-child(4) {
+    flex: 2;
+}
+
+.notice_list_btn {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.notice_list_btn button {
+    width: 30px;
+    line-height: 30px;
+    background-color: gainsboro;
+    opacity: 0.5;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.notice_list_btn button:first-child {
+    opacity: 1;
+}
+
 
 /* 고객센터 - 자주하는 질문 */
 
 .content_faq {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border-right: 1px solid;
+    border-right: 1px solid gainsboro;
     margin-bottom: 50px;
     box-sizing: border-box;
 }
 
 .content_faq div {
     display: flex;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
+    border-bottom: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
     justify-content: center;
     text-align: center;
     line-height: 50px;
     box-sizing: border-box;
-}
-
-.content_faq div a {
-    width: 100%;
-    color: black;
-    text-decoration: none;
+    /* color: black; */
     font-weight: bold;
+    cursor: pointer;
 }
 
-.content_faq div a:hover {
+.content_faq div:hover {
     color: white;
     background-color: lightsalmon;
     transition-duration: 0.2s;
 }
 
-.content_faq div a[href="#"] {
+.click_faq_list {
     background-color: lightsalmon;
     color: white;
 }
 
-.content_faq_answer {
-    display: grid;
-    grid-template-columns: 1.5fr 9fr;
-    grid-auto-rows: 60px;
-
+.faq_Box {
+    display: flex;
+    padding: 20px 0;
     border-top: 1px solid;
+    border-bottom: 2px solid;
+    font-weight: bold;
     box-sizing: border-box;
+}
+
+.content_faq_answer {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.faq_Box div,
+.faq_list div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content_faq_answer div {
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid;
-    box-sizing: border-box;
-
 }
 
-.content_faq_answer a {
+.content_faq_answer div:first-child {
+    justify-content: center;
+}
+
+.content_faq_answer div:last-child {
+    padding-left: 20px;
+}
+
+.faq_list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid black;
-    color: black;
-    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
-.content_faq_answer div:nth-child(-n + 2) {
-    font-weight: bold;
-    border-bottom: 2px solid;
-    box-sizing: border-box;
+
+.faq_Box div:first-child,
+.faq_list div:first-child,
+.content_faq_answer div:first-child {
+    flex: 1.5;
 }
 
-.content_faq_answer a:hover {
-    color: lightsalmon;
+.faq_Box div:last-child,
+.faq_list div:last-child,
+.content_faq_answer div:last-child {
+    flex: 8.5;
 }
 
 /* 고객센터 - 1:1 문의 */
 
-.content_inquiry_list {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1.5fr 1.5fr;
-    grid-auto-rows: 60px;
-
+.inquiry_box {
+    display: flex;
+    flex-direction: column;
 }
 
-.content_inquiry_list div:nth-child(-n + 4) {
-    font-weight: bold;
+.content_inquiry {
+    display: flex;
+    padding: 20px 0;
     border-bottom: 2px solid;
-    box-sizing: border-box;
-}
-
-.content_inquiry_list div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid;
-    box-sizing: border-box;
-}
-
-.content_inquiry_list a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 30px;
-    border-bottom: 1px solid;
-    box-sizing: border-box;
-    color: black;
-    text-decoration: none;
-}
-
-.content_inquiry_list a:hover {
     font-weight: bold;
+    box-sizing: border-box;
+}
+
+.content_inquiry div,
+.inquiry_list div,
+.inquiry_list_content div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inquiry_list_Box {
+    cursor: pointer;
+}
+
+.inquiry_list {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+    box-sizing: border-box;
+}
+
+.inquiry_list_content {
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    box-sizing: border-box;
+}
+
+.inquiry_list_content div:nth-child(1) {
+    flex: 1;
+
+}
+
+.inquiry_list_content div:nth-child(2) {
+    flex: 9;
+    padding: 20px;
+}
+
+.content_inquiry div:nth-child(1),
+.inquiry_list div:nth-child(1) {
+    flex: 1;
+}
+
+.content_inquiry div:nth-child(2),
+.inquiry_list div:nth-child(2) {
+    flex: 5;
+}
+
+.content_inquiry div:nth-child(3),
+.inquiry_list div:nth-child(3) {
+    flex: 2;
+}
+
+.content_inquiry div:nth-child(4),
+.inquiry_list div:nth-child(4) {
+    flex: 2;
+}
+
+.inquiry_list_btn {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inquiry_list_btn button {
+    width: 30px;
+    line-height: 30px;
+    background-color: gainsboro;
+    opacity: 0.5;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.inquiry_list_btn button:first-child {
+    opacity: 1;
 }
 
 .content_inquiry_list_2 {
@@ -237,7 +370,7 @@ main {
 
 }
 
-.inquriy_list_button {
+.inquriy_form_button {
     width: 130px;
     height: 40px;
     margin-top: 20px;
@@ -247,7 +380,7 @@ main {
     border-radius: 5px;
 }
 
-.inquriy_list_button a {
+.inquriy_form_button a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,6 +446,17 @@ main {
     margin-left: 140px;
 }
 
+.inquriy_list_button {
+    width: 130px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: lightsalmon;
+    border: solid 1px lightsalmon;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
 /* 마이페이지 - 배송지관리 */
 
 .content_adress_1 {
@@ -353,29 +497,64 @@ main {
 
 
 .content_adress_2 {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr 2fr 1fr;
-    grid-auto-rows: 60px;
-}
-
-.content_adress_2 div:nth-child(-n + 5) {
+    display: flex;
+    padding: 20px 0;
     font-weight: bold;
     border-bottom: 2px solid;
     box-sizing: border-box;
+}
+
+.content_adress_2 div:nth-child(1),
+.content_adress_box div:nth-child(1) {
+    flex: 1;
+}
+
+.content_adress_2 div:nth-child(2),
+.content_adress_box div:nth-child(2) {
+    flex: 5;
+}
+
+.content_adress_2 div:nth-child(3),
+.content_adress_box div:nth-child(3) {
+    flex: 1;
+}
+
+.content_adress_2 div:nth-child(4),
+.content_adress_box div:nth-child(4) {
+    flex: 2;
+}
+
+.content_adress_2 div:nth-child(5),
+.content_adress_box div:nth-child(5) {
+    flex: 1;
 }
 
 .content_adress_2 div {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid;
     box-sizing: border-box;
 }
 
-.content_adress_2 div:nth-of-type(5n + 10) a {
+.content_adress_box div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content_adress_box {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.content_adress_box div button {
     background: url(../image/fix.png) no-repeat center/100%;
     width: 24px;
     height: 24px;
+    cursor: pointer;
+    border: none;
 }
 
 .content_adress_3 {
@@ -646,7 +825,7 @@ main {
     height: 140px;
     box-sizing: border-box;
 
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid gainsboro;
     align-items: center;
 }
 
@@ -708,6 +887,11 @@ main {
 
 
 
+.content_wish_box .name_price span {
+    color: black;
+    font-weight: bold;
+}
+
 .content_wish_box .name_price a {
     text-decoration: none;
     color: black;
@@ -723,7 +907,7 @@ main {
 
 .content_reivew {
     height: 80px;
-    border-bottom: solid 1px silver;
+    border-bottom: solid 1px gainsboro;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -731,7 +915,7 @@ main {
 
 
 .content_reivew_1 {
-    border: solid 1px silver;
+    border: solid 1px gainsboro;
     box-sizing: border-box;
     border-top: 0px;
     display: flex;
@@ -747,7 +931,7 @@ main {
 }
 
 .content_reivew_1 div:nth-child(1) {
-    border-right: 1px solid silver;
+    border-right: 1px solid gainsboro;
     box-sizing: border-box;
 }
 
@@ -771,7 +955,7 @@ main {
 .content_reivew_box {
     display: flex;
     height: 120px;
-    border: 1px solid silver;
+    border: 1px solid gainsboro;
     margin-bottom: 10px;
 }
 
@@ -937,7 +1121,7 @@ main {
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid gainsboro;
     box-sizing: border-box;
 
 }
@@ -1018,4 +1202,282 @@ main {
     align-items: center;
     box-sizing: border-box;
     margin-right: 20px;
+}
+
+
+/* 공통 사항*/
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================modal box========================= */
+
+
+.delet_modal_content,
+.put_modal_content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.601);
+}
+
+.delet_Btn_div {
+    display: flex;
+}
+
+.delet_modalBox {
+    position: absolute;
+    background-color: #fff;
+    width: 300px;
+    height: 130px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.delet_modalBox p {
+    padding-top: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.73)
+}
+
+
+.delet_modalBox button,
+.put_modalBox .put_btn_div button {
+    box-sizing: border-box;
+    color: lightsalmon;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+}
+
+.delet_Btn_div button:nth-child(1) {
+    border-right: 1px solid gainsboro;
+    border-radius: 0 0 0 10px;
+}
+
+.delet_Btn_div button:nth-child(2) {
+    border-radius: 0 0 10px 0;
+}
+
+.scroll_none {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow: hidden;
+}
+
+.put_modalBox {
+    position: absolute;
+    background-color: #fff;
+    height: auto;
+    width: 440px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.put_modalBox div:first-child(1) {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.goods_name+div {
+
+    justify-content: space-between;
+    display: flex;
+}
+
+.goods_button {
+    display: flex;
+    width: 80px;
+    height: 36px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.minus_goods {
+    background: url(../image/minus.png) no-repeat center/100%;
+    border: none;
+    height: 30px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.plus_goods {
+    background: url(../image/plus.png) no-repeat center/100%;
+    border: none;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.goods_button div {
+    width: 30px;
+}
+
+.goods_prize {
+    display: flex;
+    align-items: center;
+}
+
+.tot_goods_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.put_Btn_div {
+    display: flex;
+}
+
+.put_Btn_div button {
+    box-sizing: border-box;
+    color: lightsalmon;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+}
+
+
+.put_Btn_div button:nth-child(1) {
+    border-right: 1px solid gainsboro;
+    border-radius: 0 0 0 10px;
+}
+
+.put_Btn_div button:nth-child(2) {
+    border-radius: 0 0 10px 0;
+}
+
+.goods_name {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.goods_name+div {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tot_goods_box {
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.minus_goods {
+    opacity: .5;
+}
+
+/* 배송지 관리 모달창 */
+
+.address_fix_content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.address_fix_box {
+    position: absolute;
+    background-color: #fff;
+    height: auto;
+    width: 400px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1px 3px;
+}
+
+.address_fix_box h2 {
+    padding: 20px;
+}
+
+.address_fix_box>div {
+    padding: 0 20px 20px 20px;
+}
+
+.address_fix_box div:last-child {
+    padding: 0;
+}
+
+
+.address_fix_box input {
+    width: 100%;
+    height: 30px;
+}
+
+.address_fix_button {
+    display: flex;
+}
+
+.address_fix_button button {
+    box-sizing: border-box;
+    color: lightsalmon;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+}
+
+.address_fix_button .fix_check {
+    border-right: 1px solid gainsboro;
+    border-radius: 0 0 0 10px;
+}
+
+.fix_cancel {
+    border-radius: 0 0 10px 0;
 }

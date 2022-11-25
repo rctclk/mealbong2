@@ -6,8 +6,35 @@
     outline: none;
 }
 
+.post,
+.food_hint {
+    font-size: 0.8em;
+    color: gray;
+}
 
-/*header 로고 / 검색창 / 로그인 정렬---------*/
+.innerbox3 .food_box .post {
+    margin-bottom: 0;
+}
+
+.only,
+.limited {
+    background-color: rgb(244, 244, 244);
+    color: salmon;
+    font-size: 0.8em;
+    border-radius: 3px;
+    padding: 2px 10px;
+}
+
+.only {
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.limited {
+    width: 90px;
+}
+
+/* header 로고 / 검색창 / 로그인 정렬---------*/
 .flex-box {
     margin: auto;
     display: flex;
@@ -15,22 +42,18 @@
     justify-content: space-between;
     align-items: center;
     width: 1200px;
-    height: 100px;
+    /* height: 100px; */
 }
 
-/*header 상단고정---------*/
+/* header 상단고정---------*/
 
 header {
     top: 0;
-    height: 160px;
     min-width: 1200px;
-    position: sticky;
     background-color: white;
-    box-shadow: 0 4px 4px -4px gray;
-    z-index: 2;
 }
 
-/*header 로고---------*/
+/* header 로고---------*/
 
 .logo {
     background-size: 100%;
@@ -40,16 +63,37 @@ header {
 
 .space {
     min-width: 1200px;
-    height: 25px;
-    background-color: lightsalmon;
-    margin: auto;
+    height: 30px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    background-color: rgba(255, 160, 122, 0.708);
+    /* transition: .4s ease-in-out; */
+}
+
+.space a {
+    color: white;
+    text-decoration: none;
+    /* transition: .4s; */
+}
+
+.space-close {
+    position: absolute;
+    border: none;
+    right: 20px;
+    margin-top: calc((30px - 20px)/2);
+}
+
+.space-close img {
+    width: 20px;
+    height: 20px;
+    opacity: .8;
+    cursor: pointer;
 }
 
 .login {
-    /* width: 220px; */
+    justify-content: flex-end;
     display: flex;
     gap: 15px;
     right: 0;
@@ -58,7 +102,11 @@ header {
 
 .login a {
     text-decoration: none;
-    color: white;
+    color: black;
+}
+
+.login li:hover a {
+    text-decoration: underline;
 }
 
 .login>li {
@@ -79,16 +127,11 @@ header {
     top: 100%;
 }
 
-.login li:nth-of-type(3):hover .hoverbox {
-    display: block;
-}
-
 .hoverbox a {
     color: black;
     font-size: .9em;
     display: block;
 }
-
 
 /*header 검색창---------*/
 
@@ -111,6 +154,9 @@ header {
 .button {
     border: none;
     background: none;
+    width: 30px;
+    height: 30px;
+    cursor : pointer;
 }
 
 .button-set {
@@ -119,7 +165,7 @@ header {
     margin-right: 8px;
 }
 
-/* 장바구니 찜한 상품 ---------*/
+/* 장바구니 찜한 상품 --------- */
 
 .cart_heart {
     width: 150px;
@@ -166,20 +212,29 @@ header {
     justify-content: space-between;
 }
 
+.menu_price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 nav {
     min-width: 1200px;
-    height: 35px;
+    line-height: 50px;
     display: flex;
     justify-content: space-around;
-    /* position: sticky; */
-    top: 0px;
+    position: sticky;
+    top: -2px;
+    box-shadow: 0 4px 4px -4px gray;
+    background-color: white;
+    z-index: 2;
 }
 
 .menu>li {
     text-align: center;
     width: 150px;
-    line-height: 35px;
+    line-height: 40px;
     margin: 0 40px;
+    box-sizing: border-box;
 }
 
 .menu>li>a {
@@ -202,7 +257,6 @@ nav {
     display: block;
 }
 
-
 .submenu>li,
 .submenu2>li {
     width: 150px;
@@ -213,11 +267,19 @@ nav {
     border-top: none;
 }
 
+.submenu>li:first-of-type,
+.submenu2>li:first-of-type {
+    border-top: 0.5px solid lightgray;
+}
+
 /* 메뉴 hover ---------*/
 
 .menu li:hover {
-    background-color: rgb(255, 196, 172);
-    transition-duration: 0.5s;
+    text-decoration: underline;
+}
+
+.menu>li:hover>a {
+    color: lightsalmon;
 }
 
 nav ul li:nth-child(1):hover .submenu,
@@ -226,55 +288,207 @@ nav ul li:nth-child(4):hover .submenu2 {
 }
 
 /* banner ------------*/
+.bannerContainer {
+    position: relative;
+    width: 100%;
+}
 
-.banner {
-    min-width: 1200px;
+.btn_left,
+.btn_right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    top: calc(500px / 2 - 50px);
+    transform: translateY(50%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn_left img,
+.btn_right img {
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+}
+
+.btn_left {
+    left: 20px;
+}
+
+.btn_right {
+    right: 20px;
+}
+
+.btn_left:hover img,
+.btn_right:hover img {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.main-banner {
+    object-fit: cover;
+    background-position: center;
+    white-space: nowrap;
+    height: 500px;
+    width: 400%;
+    /* min-width: 4800px; */
+    position: absolute;
+    transition: 0.5s ease-out;
+    left: 0;
+}
+
+.main-banner li {
+    transition: all .5s;
+    width: 25%;
+    float: left;
+}
+
+.main-banner img {
+    object-fit: cover;
+    background-size: 100%;
     height: 500px;
     width: 100%;
-    object-fit: cover;
+    min-width: 1200px;
+}
+
+.slide-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    min-width: 1200px;
+}
+
+.main-banner .animated {
+    transition: 0.5s ease-out;
 }
 
 /* main -------------*/
 
-.main-width {
-    width: 1200px;
+/* .main-width {
+    width: 1000px;
+    margin: 0 auto;
+} */
+
+.menuContainer,
+.menuContainer2,
+.menuContainer3,
+.menuContainer4 {
+    position: relative;
+    width: 1000px;
+    height: 450px;
     margin: 0 auto;
 }
 
-.main-flex,
-.pop_pro,
-.rec {
+.mainFrame,
+.mainFrame2,
+.mainFrame3,
+.mainFrame4 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-top,
+.main-top2,
+.main-top3,
+.main-top4 {
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    left: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
+    transition: all .5s;
+}
+
+.mainMenu,
+.mainMenu2,
+.mainMenu3,
+.mainMenu4 {
+    height: 100%;
 }
 
 .pop_pro {
+    display: flex;
     margin-bottom: 100px;
+    align-content: center;
+    /* text-align: center; */
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btn_forward,
+.btn_back,
+.btn_forward2,
+.btn_back2,
+.btn_forward3,
+.btn_back3,
+.btn_forward4,
+.btn_back4 {
+    position: absolute;
+    background: none;
+    border: none;
+    opacity: .3;
+    width: 50px;
+    height: 50px;
+    top: 30%;
+}
+
+.btn_back,
+.btn_back2,
+.btn_back3,
+.btn_back4 {
+    right: 100%;
+}
+
+.btn_forward,
+.btn_forward2,
+.btn_forward3,
+.btn_forward4 {
+    left: 100%
+}
+
+.btn_forward:hover,
+.btn_back:hover,
+.btn_forward2:hover,
+.btn_back2:hover,
+.btn_forward3:hover,
+.btn_back3:hover,
+.btn_forward4:hover,
+.btn_back4:hover {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.btn_forward img,
+.btn_back img,
+.btn_forward2 img,
+.btn_back2 img,
+.btn_forward3 img,
+.btn_back3 img,
+.btn_forward4 img,
+.btn_back4 img {
+    width: 50px;
+    height: 50px;
 }
 
 .pop {
     font-size: 1.5em;
     font-weight: bold;
     margin: 30px auto;
+    text-align: center;
+    width : 250px;
 }
 
 .pop a {
     text-decoration: none;
     color: black;
 }
-
-.pop_pro {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-    justify-content: center;
-}
-
-.rec {
-    display: grid;
-    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
-    justify-content: center;
+.pop h2 {
+    margin-top : 80px;
+    text-align: center;
 }
 
 .game {
@@ -286,9 +500,12 @@ nav ul li:nth-child(4):hover .submenu2 {
 }
 
 .product {
-    margin: 20px;
-    overflow: hidden;
+    margin: 10px;
+    /* overflow: hidden; */
     position: relative;
+    width: 100%;
+    height: 300px;
+    transition: all .5s;
 }
 
 .product a {
@@ -296,18 +513,11 @@ nav ul li:nth-child(4):hover .submenu2 {
     text-decoration: none;
 }
 
-.product img {
-    border-radius: 5%;
-}
-
 .pro1 img {
     width: 100%;
     transition: all 0.2s linear;
 }
 
-.pro1:hover img {
-    opacity: .8;
-}
 
 header {
     z-index: 3;
@@ -340,7 +550,6 @@ header {
     width: 1200px;
 }
 
-
 .main-category a {
     width: 110px;
     height: 110px;
@@ -368,6 +577,28 @@ header {
     bottom: 10px;
     right: 10px;
     object-fit: cover;
+    visibility: hidden;
+    opacity: 0;
+    /* transition: all .5s; */
+}
+
+.topButton img {
+    width: 50px;
+    height: 50px;
+}
+
+.btnScroll {
+    opacity: .5;
+    visibility: visible;
+}
+
+.btnHover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.nonVisible {
+    visibility: hidden;
 }
 
 /* footer ------------ */
@@ -400,10 +631,6 @@ footer {
 pre {
     font-size: .8em;
 }
-
-
-
-
 
 /* =============================================== */
 /* food_page css */
@@ -445,7 +672,6 @@ pre {
 .innerbox1 img {
     width: 100%;
     height: 100%;
-    border-radius: 5%;
 }
 
 #menu,
@@ -550,4 +776,90 @@ pre {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.product button {
+    background-image: url(../image/basket.png);
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+
+    background-color: lightsalmon;
+    opacity: 0.8;
+    border-radius: 50%;
+    border: none;
+}
+
+.product button:hover {
+    cursor: pointer;
+}
+
+.img_container {
+    overflow: hidden;
+}
+
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.601);
+}
+
+.modalBox {
+    position: absolute;
+    background-color: #fff;
+    top : 35%;
+    width : 300px;
+    height : 180px;
+    text-align : center;
+    border-radius: 10px;
+    display : flex;
+    flex-direction: column;
+    justify-content : space-between
+}
+
+.modalBox p {
+    padding : 30px;
+    font-weight : 600;
+    color :rgba(0, 0, 0, 0.73)
+}
+
+
+.modalBox button {
+    box-sizing : border-box;
+    color: lightsalmon;
+    font-weight : bold;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    height : 50px;
+    width : 100%;
+    margin : 0 auto;
+    cursor : pointer;
+    border : none;
+    background-color: white;
+    border-top : 1px solid gainsboro;
+    border-radius : 0 0 10px 10px;
+}
+
+.hidden  {
+    display : none;
 }

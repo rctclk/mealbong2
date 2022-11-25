@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/219136e9eb.js" crossorigin="anonymous"></script>
+    <script defer src="./js/main_banner.js"></script>
+    <script defer src="./js/main_topbutton.js"></script>
+    <script defer src="./js/main_menu.js"></script>
+    <script defer src="./js/main_topDiv.js"></script>
+    <script defer src="./js/main_hover.js"></script>
     <title> 밀키트 쇼핑몰 :: Meal Bong </title>
 </head>
 
@@ -17,24 +22,25 @@
     <!-- 헤더 : 로고 / 검색창 /  -->
     <header>
         <div class="space">
-            <ul class="login">
-                <li><a href="html/login/Terms.html">회원가입</a></li>
-                <li><a href="html/login/login.html">로그인</a></li>
-                <li class><a href="html/service_page/notice.html">고객센터</a>
-                    <ul class="hoverbox">
-                        <li><a href="html/service_page/notice.html">공지사항</a></li>
-                        <li><a href="html/service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="html/service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+            <a href="./html/login/account.html">
+                지금 가입하고 적립금 <b>10,000원</b> 받아가세요!
+            </a>
+            <a class="space-close">
+                <img src="./image/closeBtn.png">
+            </a>
+
         </div>
+        <ul class="login">
+            <li><a href="html/login/Terms.html">회원가입</a></li>
+            <li><a href="html/login/login.html">로그인</a></li>
+        </ul>
         <div class="flex-box">
             <a href="#"><img src="image/logo4.png" alt="logo" class="logo"></a>
             <form>
                 <div class="search">
-                    <input type="text" placeholder="검색어를 입력 하세요" required>
-                    <button class="button"><img class="button-set" src="image/search.png"></button>
+                    <input type="text" placeholder="검색어를 입력 하세요" id="search_input">
+                    <a href="html/search/search.html" class="button"><img class="button-set" src="image/search.png"></a>
                 </div>
             </form>
             <div class="cart_heart">
@@ -44,148 +50,1227 @@
             </div>
         </div>
         <!-- nav / position : sticky -->
-        <nav>
-            <ul class="menu">
-                <li><a href="./html/menu_list/Korean_menulist.html">카테고리</a>
-                    <ul class="submenu">
-                        <li><a href="html/menu_list/Korean_menulist.html">한식</a></li>
-                        <li><a href="html/menu_list/Chinese_menulist.html">중식</a></li>
-                        <li><a href="html/menu_list/Japanese_menulist.html">일식</a></li>
-                        <li><a href="html/menu_list/Western_menulist.html">양식</a></li>
-                        <li><a href="html/menu_list/Bunsik_menulist.html">분식/야식</a></li>
-                        <li><a href="html/menu_list/Asian_menulist.html">아시안</a></li>
-                    </ul>
-                </li>
-                <li><a href="#pop">인기상품</a></li>
-                <li><a href="#recommend">오늘의 추천</a></li>
-                <li><a href="html/service_page/notice.html">고객센터</a>
-                    <ul class="submenu2">
-                        <li><a href="html/service_page/notice.html">공지사항</a></li>
-                        <li><a href="html/service_page/faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="html/service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="./html/menu_list/Korean_menulist.html">카테고리</a>
+                <ul class="submenu">
+                    <li><a href="html/menu_list/Korean_menulist.html">한식</a></li>
+                    <li><a href="html/menu_list/Chinese_menulist.html">중식</a></li>
+                    <li><a href="html/menu_list/Japanese_menulist.html">일식</a></li>
+                    <li><a href="html/menu_list/Western_menulist.html">양식</a></li>
+                    <li><a href="html/menu_list/Bunsik_menulist.html">분식/야식</a></li>
+                    <li><a href="html/menu_list/Asian_menulist.html">아시안</a></li>
+                </ul>
+            </li>
+            <li><a href="#pop">인기상품</a></li>
+            <li><a href="#recommend">오늘의 추천</a></li>
+            <li><a href="html/service_page/notice.html">고객센터</a>
+                <ul class="submenu2">
+                    <li><a href="html/service_page/notice.html">공지사항</a></li>
+                    <li><a href="html/service_page/faq/faq.html">자주하는 질문</a></li>
+                    <li><a href="html/service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
     <!-- 메인 :  배너 / 인기 상품 / 카테고리 / 오늘의 추천-->
     <main>
-        <a href="#"><img src="image/banner3.png" alt="banner" class="banner"></a>
-        <div class="main-category">
-            <a href="html/menu_list/Korean_menulist.html">한식</a>
-            <a href="html/menu_list/Chinese_menulist.html">중식</a>
-            <a href="html/menu_list/Japanese_menulist.html">일식</a>
-            <a href="html/menu_list/Western_menulist.html">양식</a>
-            <a href="html/menu_list/Bunsik_menulist.html">분식/야식</a>
-            <a href="html/menu_list/Asian_menulist.html">아시안</a>
+        <div class="bannerContainer">
+            <div class="slide-container">
+                <a class="btn_left bannerNonVisible" href="#" data-move-value="-1">
+                    <img src="./image/preHover.png" alt="back_img">
+                </a>
+                <ul class="main-banner">
+                    <li><img src="./image/banner3.png"></li>
+                    <li><img src="./image/banner1.png"></li>
+                    <li><img src="./image/banner2.png"></li>
+                    <li><img src="./image/banner4.png"></li>
+                </ul>
+                <a class="btn_right" href="#" data-move-value="1">
+                    <img src="./image/nextHover.png" alt="foward_img">
+                </a>
+            </div>
         </div>
 
-        <div class="pop main-width main-flex"><a href="#" name="pop">
+        <div class="pop main-width"><a href="#" name="pop">
                 <h2>인기상품</h2>
             </a></div>
-
-        <div class="pop_pro main-width">
-            <div class="product">
-                <a href="html/food_info/Korean_FoodInfo/Korean_SoybeanSoup.html" class="pro1"><img
-                        src="image/Korean/애호박 된장찌개(2인).jpg"></a>
-                    <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Korean_FoodInfo/Korean_SoybeanSoup.html"><strong>애호박 된장찌개</strong></a>
-                <div>10,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Japanese_FoodInfo/Japanese_millefeuille.html" class="pro1"><img
-                        src="image/Japanese/나혼자 밀푀유(1인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/japanese_menulist/millefeuille.html"><strong>나혼자 밀푀유 샤브전골</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Chinese_FoodInfo/Chinese_MaraSoup.html" class="pro1"><img
-                        src="image/Chinese/얼큰 마라탕(2인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Chinese_FoodInfo/Chinese_MaraSoup.html"><strong>얼큰 마라탕</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Western_Foodinfo/Western_OlioPasta.html" class="pro1"><img
-                        src="image/Western/알리오올리오 파스타(2인).PNG" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Western_Foodinfo/Western_OlioPasta.html"><strong>알리오올리오 파스타</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
-                        src="image/Asian/불고기 분짜(3~4인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>불고기 분짜</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Bunsik_FoodInfo/Bunsik_ChickenFoot.html" class="pro1"><img
-                        src="image/Bunsik/볼케이노 국물닭발(2인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Bunsik_FoodInfo/Bunsik_ChickenFoot.html"><strong>볼케이노 국물닭발</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Japanese_FoodInfo/Japanese_soba.html" class="pro1"><img
-                        src="image/Japanese/메밀소바(1인).jpeg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Japanese_FoodInfo/Japanese_soba.html"><strong>메밀 소바</strong></a>
-                <div>5,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Asian_FoodInfo/Asian_WolnamSsam.html" class="pro1"><img
-                        src="image/Asian/월남쌈(2~3인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="#"><strong>월남쌈</strong></a>
-                <div>12,000원</div>
+        <div class="menuContainer">
+            <a class="btn_back nonVisible" href="#" data-move-value="-1">
+                <img src="./image/preHover.png" alt="back_img">
+            </a>
+            <a class="btn_forward" href="#" data-move-value="1">
+                <img src="./image/nextHover.png" alt="foward_img">
+            </a>
+            <div class="mainFrame">
+                <div class="main-top">
+                    <div class="mainMenu pop_pro">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainMenu pop_pro">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainMenu pop_pro">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainMenu pop_pro">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="pop main-width main-flex"><a href="#" name="recommend">
+        <div class="pop main-width"><a href="#" name="recommend">
                 <h2>오늘의 추천</h2>
             </a></div>
-        <div class="rec main-width">
-            <div class="product">
-                <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
-                        src="image/Asian/불고기 분짜(3~4인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>불고기 분짜</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Chinese_FoodInfo/Chinese_MaraSoup.html" class="pro1"><img
-                        src="image/Chinese/얼큰 마라탕(2인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Chinese_FoodInfo/Chinese_MaraSoup.html"><strong>얼큰 마라탕</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Bunsik_FoodInfo/Bunsik_ChickenFoot.html" class="pro1"><img
-                        src="image/Bunsik/볼케이노 국물닭발(2인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Bunsik_FoodInfo/Bunsik_ChickenFoot.html"><strong>볼케이노 국물닭발</strong></a>
-                <div>12,000원</div>
-            </div>
-            <div class="product">
-                <a href="html/food_info/Asian_FoodInfo/Asian_WolnamSsam.html" class="pro1"><img
-                        src="image/Asian/월남쌈(2~3인).jpg" class="pro1"></a>
-                <button><i id="wish_icon" class="fa-solid fa-heart fa-2x"></i></button>
-                <a href="html/food_info/Asian_FoodInfo/Asian_WolnamSsam.html"><strong>월남쌈</strong></a>
-                <div>12,000원</div>
+        <div class="menuContainer2">
+            <a class="btn_back2 nonVisible" href="#" data-move-value="-1">
+                <img src="./image/preHover.png" alt="back_img">
+            </a>
+            <a class="btn_forward2" href="#" data-move-value="1">
+                <img src="./image/nextHover.png" alt="foward_img">
+            </a>
+            <div class="mainFrame2">
+                <div class="main-top2 ">
+                    <div class="pop_pro mainMenu2">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu2">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu2">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu2">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="game">게임 만들 자리</div>
+
+        <div class="pop main-width"><a href="#">
+                <h2>포장마차 감성</h2>
+            </a></div>
+        <div class="menuContainer3">
+            <a class="btn_back3 nonVisible" href="#" data-move-value="-1">
+                <img src="./image/preHover.png" alt="back_img">
+            </a>
+            <a class="btn_forward3" href="#" data-move-value="1">
+                <img src="./image/nextHover.png" alt="foward_img">
+            </a>
+            <div class="mainFrame3">
+                <div class="main-top3">
+                    <div class="pop_pro mainMenu3">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu3">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu3">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu3">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pop main-width"><a href="#">
+                <h2>가볍게 한 끼</h2>
+            </a></div>
+        <div class="menuContainer4">
+            <a class="btn_back4 nonVisible" href="#" data-move-value="-1">
+                <img src="./image/preHover.png" alt="back_img">
+            </a>
+            <a class="btn_forward4" href="#" data-move-value="1">
+                <img src="./image/nextHover.png" alt="foward_img">
+            </a>
+            <div class="mainFrame4">
+                <div class="main-top4">
+                    <div class="pop_pro mainMenu4">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu4">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu4">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_pro mainMenu4">
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                                <div class="img_container">
+                                    <img src="./image/Food_img.PNG">
+                                </div>
+                            </a>
+                            <button class="basket"></button>
+                            <div class="post">샛별배송</div>
+                            <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                            <div class="menu_price">10,000 원</div>
+                            <div class="food_hint">취향대로 끓여서 완성하는</div>
+                            <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="mainFrame4">
+            <div class="main-top4">
+                <div class="pop_pro mainMenu4">
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1">
+                            <div class="img_container">
+                                <img src="./image/Food_img.PNG">
+                            </div>
+                        </a>
+                        <button class="basket"></button>
+                        <div class="post">샛별배송</div>
+                        <div class="menu_name"><a href="#">나시고랭(2인)</a></div>
+                        <div class="menu_price">10,000 원</div>
+                        <div class="food_hint">취향대로 끓여서 완성하는</div>
+                        <div class="hint_under"><span class="only">Mealbong Only</span><span class="limited">한정수량</span>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                </div>
+                <div class="pop_pro mainMenu4">
+                    <div class="product">
+                        <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                </div>
+                <div class="pop_pro mainMenu4">
+                    <div class="product">
+                        <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                </div>
+                <div class="pop_pro mainMenu4">
+                    <div class="product">
+                        <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                    <div class="product">
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                                src="./image/Food_img.PNG" class="pro1"></a>
+                        <button class="basket"></button>
+                        <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                        <div>10,000원</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!--
+        <div class="pop main-width main-flex"><a href="#" name="recommend">
+                <h2>소주 한 잔</h2>
+            </a></div>
+        <div class="main-top">
+            <div class="pop_pro main-width">
+                <div class="product">
+                    <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                            src="image/Asian/나시고랭 (2인)(3~4인).jpg" class="pro1"></a>
+                    <button class="basket"></button>
+                    <a href="html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                    <div>10,000원</div>
+                </div>
+                <div class="product">
+                    <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                            src="image/Chinese/나시고랭 (2인)(2인).jpg" class="pro1"></a>
+                    <button class="basket"></button>
+                    <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                    <div>10,000원</div>
+                </div>
+                <div class="product">
+                    <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                            src="image/Bunsik/나시고랭 (2인)(2인).jpg" class="pro1"></a>
+                    <button class="basket"></button>
+                    <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                    <div>10,000원</div>
+                </div>
+                <div class="product">
+                    <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html" class="pro1"><img
+                            src="image/Asian/나시고랭 (2인)(2~3인).jpg" class="pro1"></a>
+                    <button class="basket"></button>
+                    <a href="./html/food_info/Asian_FoodInfo/Asian_Bunzza.html"><strong>나시고랭 (2인)</strong></a>
+                    <div>10,000원</div>
+                </div>
+            </div>
+        </div>
+        <div class="game">게임 만들 자리</div> -->
 
         <div class="topButton">
             <a href="#"><img src="image/topbutton.png" title="위로 가기"></a>
         </div>
 
-    </main>
 
-
+    <div class="modal_container hidden">
+        <div class="bg"></div>
+        <div class="modalBox">
+            <p></p>
+            <div class="closeBtn_div">
+                <form action="html/login/login.html">
+                    <button class="closeBtn">확인</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
     <!-- footer : 법적 필수 항목 -->
     <footer>
         <hr>

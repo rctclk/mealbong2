@@ -9,100 +9,347 @@
 
 .outerbox1 {
     width: 1200px;
-    height: 500px;
-    margin: 50px auto;
-    margin-bottom: 200px;
+    height: 1200px;
+    margin: 50px auto 0;
 
     display: flex;
     justify-content: space-around;
 }
 
-.innerbox1>ul {
-    width: 500px;
-    height: 500px;
+/* innerbox 2 음식 사진 옆에 정보들 나열 */
 
+
+.innerbox2 {
+    width: 580px;
+    height: 1100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-content: space-between;
 }
 
-.innerbox1>ul>li {
-    border-bottom: 1px solid;
-    padding-bottom: 10px;
+.innerbox2 div:nth-child(1),
+.innerbox2 div:nth-child(3) {
+    color: gray;
 }
 
-.innerbox1>ul>li:last-child {
-    border: none;
+
+.innerbox2 div:nth-child(1),
+.innerbox2 div:nth-child(2),
+.innerbox2 div:nth-child(3),
+.innerbox2 div:nth-child(4) {
+    padding: 5px 0;
 }
 
-.innerbox1:first-child {
-    width: 600px;
-    height: 500px;
-}
-
-.innerbox1 img {
-    width: 100%;
-    height: 90%;
-    border-radius: 5%;
-}
-
-#menu,
-#delivery,
-#amount {
+.innerbox2 div:nth-child(5),
+.innerbox2 div:nth-child(6),
+.innerbox2 div:nth-child(7),
+.innerbox2 div:nth-child(8),
+.innerbox2 div:nth-child(9),
+.innerbox2 div:nth-child(10),
+.innerbox2 div:nth-child(11),
+.innerbox2 div:nth-child(12),
+.innerbox2 div:nth-child(13),
+.innerbox2 div:nth-child(14) {
+    padding: 18px 0;
+    border-top: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
 }
 
-#icons ul,
-#sale {
-    display: flex;
-    justify-content: space-around;
-}
-
-#amount select {
-    width: 100px;
-}
-
-.foodpage_button {
-    width: 160px;
-    height: 50px;
+.innerbox2 dl,
+.innerbox2 dt {
     display: inline-block;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: lightsalmon;
-    border: solid 1px lightsalmon;
-    border-radius: 5px;
-    margin: 0;
-    transition-duration: 0.3s;
+}
 
+.innerbox2 dl {
+    color: #666666
+}
+
+.innerbox2 dt {
+    color: #333333
+}
+
+.innerbox2 div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.innerbox2 div:nth-child(2)>h2 {
+    display: inline-block;
+}
+
+.innerbox2 div:nth-child(11) dl {
+    width: 110px;
+    padding-right: 100px;
+}
+
+#share {
+    border: 1px solid darkgray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.innerbox2 dl {
+    font-size: 14px;
+}
+
+.innerbox1 {
+    width: 440px;
+    height: 560px;
+}
+
+.innerbox1 img {
+    width: 430px;
+    height: 552px;
+}
+
+.innerbox2 p {
+    text-align: justify;
+}
+
+.div1_inputNumber {
+    margin-right: 18px;
+}
+
+/* ================ SNS 공유하기 ================ */
+.SNS_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.601);
+}
+
+.facebook img {
+    margin-top: 15px;
+}
+
+.facebook img,
+.kakaotalk img,
+.instagram img {
+    width: 30px;
+    height: 30px;
+}
+
+.facebook,
+.kakaotalk,
+.instagram {
+    display: inline-block;
+}
+
+.SNS_Box {
+    position: absolute;
+    background-color: #fff;
+    top: 35%;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.SNS_closeBtn {
+    box-sizing: border-box;
+    color: lightsalmon;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+    border-radius: 0 0 10px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.scroll_none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: hidden;
+}
+
+.scroll_none::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ==========================total_amount========================= */
+
+#total_amount span:nth-child(2) {
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+}
+
+#total_amount span:nth-child(3) {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+/* ==========================btn_box========================= */
+
+#btn_box .wish,
+#btn_box .basket {
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    border: solid 1px lightgray;
+    margin-right: 10px;
+}
+
+
+#btn_box .wish {
+    background-image: url(../image/heart_coral.png);
+    cursor: pointer;
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+
+
+#btn_box .basket {
+    cursor: pointer;
+    width: 280px;
+    background-color: lightsalmon;
+    color: white;
+    border: none;
     font-size: 20px;
 }
 
-#sale .foodpage_button a {
-    color: white;
+
+/* =====================장바구니 및 좋아요 modal box==================== */
+/* 로그인 하기 전 */
+
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#sale button a {
-    text-decoration: none;
-    color: black;
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.601);
 }
+
+.modalBox {
+    position: absolute;
+    background-color: #fff;
+    top: 35%;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.modalBox p {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.73);
+    padding: 30px;
+}
+
+
+.modalBox button {
+    box-sizing: border-box;
+    color: lightsalmon;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+    border-radius: 0 0 10px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.scroll_none {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow: hidden;
+}
+
+.scroll_none::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
+
+/* =====================장바구니 및 좋아요 modal box==================== */
+/* 로그인 한 후 */
+
+/* =============================================== */
+/* 총 금액 설정 */
+
+
 
 /* =============================================== */
 /* middle box 설정 */
 
-.middlebox {
-    /* border:1px solid; */
+.tab_box {
     width: 1200px;
-    height: 150px;
     margin: auto;
-
-    display: flex;
-    justify-content: space-around;
+    position: sticky;
+    top: 5%;
 }
 
-.middlebox a {
-    color: black;
+.tab_middlebox {
+    margin: 0 20px 100px 20px;
+    gap: 50px;
+    display: flex;
+    background-color: white;
+}
+
+.tab_middlebox a {
+    color: lightsalmon;
     text-decoration: none;
+    flex: 1;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px silver solid;
+    box-sizing: border-box;
+}
+
+.tab_middlebox a:hover {
+    font-weight: bold;
 }
 
 /* ================================================ */
@@ -158,10 +405,9 @@
     align-items: center;
 }
 
-#food_review a,
-#food_inquiry a {
-    color: black;
-    text-decoration: none;
+.product_inquiry,
+.product_review {
+    cursor: pointer;
 }
 
 /* top button ------------ */

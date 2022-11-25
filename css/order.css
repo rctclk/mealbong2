@@ -49,8 +49,9 @@
 .diva3_sub {
     display : flex;
     flex-direction: column;
-    height : 140px;
-    justify-content : center;
+    height : 200px;
+    /* justify-content : center; */
+    padding-top : 20px;
 }
 
 .diva3_sub_row,
@@ -113,11 +114,11 @@
     cursor : pointer;
 }
 
-.diva3_button:focus {
+/* .diva3_button:focus {
     background-color: lightsalmon;
     color : white;
     border : none;
-}
+} */
 
 .bb1:focus .diva3sub_box {
     display : block;
@@ -248,7 +249,6 @@
 
 .order_div {
     width : 30%;
-    height : 800px;
     display : flex;
     text-align : left;
     flex-direction : column;
@@ -302,7 +302,7 @@
 }
 
 .cart_subdiv12 {
-    height : 24%;
+    height : 187px;
     border : 1px solid;
     display : flex;
     flex-direction : column;
@@ -363,10 +363,44 @@
     display : flex;
     align-items : center;
     justify-content : center;
+    border-radius: 5px;
 
     width : 250px;
     height : 45px;
     background-color : lightsalmon;
     text-decoration: none;
     color : white;
+}
+
+/* ===나중에추가한거 */
+
+/* .diva3_sub_sub2 button:nth-of-type(1) {
+    background-color: lightsalmon;
+        color: white;
+        border: none;
+
+} */
+
+.card_box,
+.bank_box {
+    display:flex;
+    flex-direction: column;
+    width : 400px;
+    padding-left : 210px;
+}
+
+.card_box select,
+.bank_box select {
+    width : 270px;
+}
+.card_box select:nth-of-type(1) {
+    margin-bottom : 7px;
+    
+}
+.card_box select:nth-of-type(2) {
+    margin-bottom: 20px;
+}
+
+.bank_box {
+    display : none;
 }

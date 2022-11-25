@@ -12,25 +12,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/mypage.css">
     <link rel="stylesheet" href="../../../css/mainPage.css">
+    <script defer src="../../../js/inquiry.js"></script>
+    <script defer src="../../../js/main_topDiv.js"></script>
+
+
 </head>
 
 <body>
     <header>
         <div class="space">
-            <ul class="login">
-                <li><a href="../../login/Terms.html">회원가입</a></li>
-                <li><a href="../../login/login.html">로그인</a></li>
-                <li class="l_hover"><a href="../notice.html">고객센터</a>
-                    <ul class="hoverbox">
-                        <li><a href="../notice.html">공지사항</a></li>
-                        <li><a href="../faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="./inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <a href="../../../html/login/account.html">
+                지금 가입하고 적립금 <b>10,000원</b> 받아가세요!
+            </a>
+            <a class="space-close">
+                <img src="../../../image/closeBtn.png">
+            </a>
+
         </div>
+        <ul class="login">
+            <li><a href="../../../html/login/Terms.html">회원가입</a></li>
+            <li><a href="../../../html/login/login.html">로그인</a></li>
+        </ul>
         <div class="flex-box">
-            <a href="../../../index.html"><img src="../../../image/logo4.png" alt="logo" class="logo"></a>
+            <a href="#"><img src="../../../image/logo4.png" alt="logo" class="logo"></a>
             <form>
                 <div class="search">
                     <input type="text" placeholder="검색어를 입력 하세요" required>
@@ -38,36 +42,36 @@
                 </div>
             </form>
             <div class="cart_heart">
-                <a href="../../my_page/mypage.html" class="mpage" alt="마이페이지"></a>
-                <a href="../../login/cart.html" class="cart" alt="장바구니"></a>
-                <a href="../../my_page/wish.html" class="heart" alt="찜한 상품"></a>
+                <a href="../../../html/my_page/mypage.html" class="mpage" alt="마이페이지"></a>
+                <a href="../../../html/login/cart.html" class="cart" alt="장바구니"></a>
+                <a href="../../../html/my_page/wish.html" class="heart" alt="찜한 상품"></a>
             </div>
         </div>
-        <!-- nav / position : fixed -->
-        <nav>
-            <ul class="menu">
-                <li><a href="../../menu_list/Korean_menulist.html">카테고리</a>
-                    <ul class="submenu">
-                        <li><a href="../../menu_list/Korean_menulist.html">한식</a></li>
-                        <li><a href="../../menu_list/Chinese_menulist.html">중식</a></li>
-                        <li><a href="../../menu_list/Japanese_menulist.html">일식</a></li>
-                        <li><a href="../../menu_list/Western_menulist.html">양식</a></li>
-                        <li><a href="../../menu_list/Bunsik_menulist.html">분식/야식</a></li>
-                        <li><a href="../../menu_list/Asian_menulist.html">아시안</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../../index.html#pop">인기상품</a></li>
-                <li><a href="../../../index.html#recommend">오늘의 추천</a></li>
-                <li><a href="../notice.html">고객센터</a>
-                    <ul class="submenu2">
-                        <li><a href="../notice.html">공지사항</a></li>
-                        <li><a href="../faq/faq.html">자주하는 질문</a></li>
-                        <li><a href="./inquiry_list.html">1:1 문의</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <!-- nav / position : sticky -->
     </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="../../../html/menu_list/Korean_menulist.html">카테고리</a>
+                <ul class="submenu">
+                    <li><a href="../../../html/menu_list/Korean_menulist.html">한식</a></li>
+                    <li><a href="../../../html/menu_list/Chinese_menulist.html">중식</a></li>
+                    <li><a href="../../../html/menu_list/Japanese_menulist.html">일식</a></li>
+                    <li><a href="../../../html/menu_list/Western_menulist.html">양식</a></li>
+                    <li><a href="../../../html/menu_list/Bunsik_menulist.html">분식/야식</a></li>
+                    <li><a href="../../../html/menu_list/Asian_menulist.html">아시안</a></li>
+                </ul>
+            </li>
+            <li><a href="#pop">인기상품</a></li>
+            <li><a href="#recommend">오늘의 추천</a></li>
+            <li><a href="../../../html/service_page/notice.html">고객센터</a>
+                <ul class="submenu2">
+                    <li><a href="../../../html/service_page/notice.html">공지사항</a></li>
+                    <li><a href="../../../html/service_page/faq.html">자주하는 질문</a></li>
+                    <li><a href="../../../html/service_page/inquriy/inquiry_list.html">1:1 문의</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <main>
         <div class="mypage">
             <div class="aside">
@@ -81,7 +85,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../faq/faq.html" class="faq">자주하는 질문
+                        <a href="../faq.html" class="faq">자주하는 질문
                             <span></span>
                         </a>
                     </li>
@@ -94,33 +98,278 @@
             </div>
             <div class="content">
                 <div class="content_1">
-                    <h2>1:1 문의</h2>
+                    <div>
+                        <h2>1:1 문의</h2>
+                    </div>
                 </div>
-                <div class="content_inquiry_list">
-                    <div>번호</div>
-                    <div>제목</div>
-                    <div>작성일</div>
-                    <div>답변상태</div>
-                    <div>1</div>
-                    <a href="#">상호형이 그리드 쓰라고 강요함.</a>
-                    <div>2022.09.14</div>
-                    <div>답변완료</div>
-                    <div>2</div>
-                    <a href="#">상호형이 그리드 쓰라고 강요함.</a>
-                    <div>2022.09.14</div>
-                    <div>답변완료</div>
-                    <div>3</div>
-                    <a href="#">상호형이 그리드 쓰라고 강요함.</a>
-                    <div>2022.09.14</div>
-                    <div>답변완료</div>
-                    <div>4</div>
-                    <a href="#">상호형이 그리드 쓰라고 강요함.</a>
-                    <div>2022.09.14</div>
-                    <div>답변완료</div>
+                <div class="inquiry_box">
+                    <div class="content_inquiry">
+                        <div>번호</div>
+                        <div>제목</div>
+                        <div>작성일</div>
+                        <div>답변상태</div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>15</div>
+                            <div>개인정보를 수정하고 싶어요.</div>
+                            <div>2022.11.25</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    로그인 후 마이페이지 화면에서 개인정보를 수정할 수 있습니다.<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>14</div>
+                            <div>재고가 없는 상품은 언제쯤 구입할 수 있을까요.</div>
+                            <div>2022.11.23</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    품절 상품 재입고 여부 및 일정은 정확한 확인이 가능하지 않습니다.<br>
 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>13</div>
+                            <div>1:1문의 테스트 1.</div>
+                            <div>2022.11.22</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>12</div>
+                            <div>1:1문의 테스트 2.</div>
+                            <div>2022.11.21</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>11</div>
+                            <div>1:1문의 테스트 3.</div>
+                            <div>2022.11.20</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>10</div>
+                            <div>1:1문의 테스트 4.</div>
+                            <div>2022.11.19</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>9</div>
+                            <div>1:1문의 테스트 5.</div>
+                            <div>2022.11.18</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>8</div>
+                            <div>1:1문의 테스트 6.</div>
+                            <div>2022.11.17</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>7</div>
+                            <div>1:1문의 테스트 7.</div>
+                            <div>2022.11.16</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box">
+                        <div class="inquiry_list">
+                            <div>6</div>
+                            <div>1:1문의 테스트 8.</div>
+                            <div>2022.11.15</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box hidden">
+                        <div class="inquiry_list">
+                            <div>5</div>
+                            <div>1:1문의 테스트 9.</div>
+                            <div>2022.11.14</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box hidden">
+                        <div class="inquiry_list">
+                            <div>4</div>
+                            <div>1:1문의 테스트 10.</div>
+                            <div>2022.11.13</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box hidden">
+                        <div class="inquiry_list">
+                            <div>3</div>
+                            <div>1:1문의 테스트 11.</div>
+                            <div>2022.11.12</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box hidden">
+                        <div class="inquiry_list">
+                            <div>2</div>
+                            <div>1:1문의 테스트 12.</div>
+                            <div>2022.11.11</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_Box hidden">
+                        <div class="inquiry_list">
+                            <div>1</div>
+                            <div>1:1문의 테스트 1.</div>
+                            <div>2022.11.10</div>
+                            <div>답변완료</div>
+                        </div>
+                        <div class="inquiry_list_content hidden">
+                            <div>답변</div>
+                            <div>
+                                <p>
+                                    해당 문의 내용으로는 고객님의 문의가 파악이 되지 않아 올바른 답변을 드리기가 어렵습니다.<br>
+                                    답변을 드리지 못하는 점 사과드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry_list_btn">
+                        <button>1</button>
+                        <button>2</button>
+                    </div>
                 </div>
                 <div class="content_inquiry_list_2">
-                    <button class="inquriy_list_button" type="button">
+                    <button class="inquriy_form_button" type="button">
                         <a href="./inquiry_form.html">문의 하기</a>
                     </button>
                 </div>

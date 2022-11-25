@@ -22,8 +22,6 @@
     font-size: 26px;
     margin : 55px 0 50px;
     display : block;
-
-
 }
 
 .div_a {
@@ -79,16 +77,14 @@
     justify-content : space-between;
     height : 90px;
     margin : 15px 0;
-}
-
-.div1_line {
-    border-bottom : 1px solid rgba(192, 192, 192, 0.588);
+    border-bottom: 1px solid rgba(192, 192, 192, 0.588);
 }
 
 .div1_sub_sub {
     display : flex;
     align-items : center;
     height : 90px;
+    width : 430px;
 }
 
 
@@ -108,19 +104,19 @@
 }
 
 .div1_a_img1 {
-    background : url(../image/Asian/불고기\ 분짜\(3~4인\).jpg) no-repeat center/cover;
+    background : url(../image/Food_img.PNG) no-repeat center/cover;
 }
 
 .div1_a_img2 {
-    background : url(../image/Chinese/얼큰\ 마라탕\(2인\).jpg) no-repeat center/cover;
+    background : url(../image/Food_img.PNG) no-repeat center/cover;
 }
 
 .div1_a_img3 {
-    background : url(../image/Japanese/나혼자\ 밀푀유\(1인\).jpg) no-repeat center/cover;
+    background : url(../image/Food_img.PNG) no-repeat center/cover;
 }
 
 .div1_a_img4 {
-    background : url(../image/Korean/SoybeanSoup.jpg) no-repeat center/cover;
+    background : url(../image/Food_img.PNG) no-repeat center/cover;
 }
 
 .div1_a2 {
@@ -139,10 +135,14 @@
     font-weight : bold;
     font-size : 18px;
 }
-
-.div1_inputNumber {
-    margin-right : 40px;
+.div1_span2 {
+    font-weight : bold;
+    font-size : 18px;
 }
+
+/* .div1_inputNumber {
+    margin-right : 40px;
+} */
 
 .cart_div2 {
     width : 30%;
@@ -233,8 +233,111 @@
     display : flex;
     justify-content: center;
     align-items : center;
+    border : none;
+    cursor : pointer;
 }
 
-.subdiv1_a:visited {
+/* .subdiv1_a:visited {
     color : white;
+} */
+
+
+/* ====================================== */
+/* 나중에추가한거 */
+
+.btn_add {
+    display : inline-flex;
+    width: 15px;
+    height : 15px;
+    cursor : pointer;
+}
+
+.close_btn {
+    display : inline-flex;
+    width: 30px;
+    height : 30px;
+    cursor : pointer;
+    background: url(../image/close.png) no-repeat center/50%;
+    transform : translateX(20%) translateY(-9%);
+}
+
+.btn_addBox {
+    width : 80px;
+    display : flex;
+    border : 1px solid rgb(158, 158, 158);
+    border-radius : 3px;
+    align-items: center;
+    justify-content : space-evenly;
+}
+
+.btn_addSpan {
+    width : 28px;
+    height : 28px;
+    font-weight : bold;
+    line-height: 28px;
+    cursor : default;
+}
+
+.btn_plus,
+.btn_minus {
+    border : none;
+}
+
+.btn_minus {
+    background : url(../image/minus.png) center/cover;
+    opacity : .5;
+    cursor : default;
+}
+.btn_plus {
+    background : url(../image/plus2.png) center/cover;
+}
+
+.div1_priceBox{
+    display : flex;
+    justify-content: flex-end;
+    width : 128px;
+}
+
+.cart_hidden {
+    display : none;
+}
+
+.selectAll_box {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../image/check.png) no-repeat center/75%;
+    transform: translateX(20%) translateY(-6%);
+    border : none;
+}
+.select_box {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../image/check.png) no-repeat center/75%;
+    transform: translateX(-10%) translateY(8%);
+}
+
+.label_style {
+    transform : translateX(20%)
+}
+
+.All_div {
+    display : flex;
+}
+
+/* =====모달 */
+
+.modal_zz {
+    display : flex;
+}
+
+main .modalBox button:nth-of-type(1) {
+    border-radius: 0 0 0 10px;
+    /* border-left : 1px solid gray; */
+}
+main .modalBox button:nth-of-type(2) {
+    border-radius: 0 0 10px 0;
 }
